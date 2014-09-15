@@ -1,0 +1,119 @@
+﻿@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+#feedback-page {
+    text-align: center;
+}
+
+#form-main {
+    width: 100%;
+    float: left;
+}
+
+#form-div {
+    height: 80%;
+    width: 450px;
+    float: left;
+    left: 50%;
+    position: absolute;
+    margin-top: 50px;
+    margin-left: -225px;
+    overflow-y: auto;
+}
+
+.feedback-input {
+    color: #013B55;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    background-color: #e9e7e7;
+    padding: 13px 13px 13px 54px;
+    margin-bottom: 10px;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 2px solid #c1c1c1;
+}
+
+    .feedback-input:focus {
+        background: white;
+        box-shadow: 0;
+        border: 3px solid #0393D5;
+        color: #0393D5;
+        outline: none;
+        /*padding: 13px 13px 13px 54px;*/
+    }
+
+/* Icons ---------------------------------- */
+.inputIco {
+  position: relative;
+}
+.inputIco i { 
+  position: absolute;
+  top: 18px;
+  left: 5%;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    line-height: 150%;
+    resize: vertical;
+}
+
+    .form input:hover, .form textarea:hover, .form select:hover,
+    .form input:focus, .form textarea:focus, .form select:focus {
+        background-color: white;
+    }
+
+#button-submit {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    float: left;
+    width: 100%;
+    border: #c1c1c1 solid 2px;
+    cursor: pointer;
+    background-color: #2aae62;
+    color: white;
+    font-size: 24px;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    margin-top: -2px;
+    font-weight: 700;
+}
+
+    #button-submit:hover {
+        background-color: rgba(0,0,0,0);
+        color: #2aae62;
+    }
+
+.submit:hover {
+    color: #3498db;
+}
+
+.ease {
+    width: 0px;
+    height: 74px;
+    background-color: #0E6131;
+    -webkit-transition: .7s ease;
+    -moz-transition: .7s ease;
+    -o-transition: .7s ease;
+    -ms-transition: .7s ease;
+    transition: .7s ease;
+}
+
+.submit:hover .ease {
+    width: 100%;
+    background-color: white;
+}
+
+@media only screen and (max-width: 580px) {
+    #form-div {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}

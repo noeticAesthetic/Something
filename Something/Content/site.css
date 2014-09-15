@@ -1,0 +1,284 @@
+﻿/*Blue1 #101018
+Blue2 #0757F7
+Green1 #02B6B8
+Green2 #00C685
+
+#80E9F3, #284A59
+    
+#F2F2C1    */
+
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+html,
+body,
+.container,
+.pusher,
+.content {
+	height: 100%;
+}
+
+body {
+	background: #162931;
+	color: #013B55;
+	font-family: 'Lato', Calibri, Arial, sans-serif;
+}
+
+li {
+    list-style-type: none;
+}
+
+.content {
+	overflow-y: auto;
+	background: #ECE9BE;
+}
+
+.content,
+.content-inner {
+	/*position: relative;*/
+}
+
+.container {
+	position: relative;
+	overflow: hidden;
+}
+
+.pusher {
+	position: relative;
+	left: 0;
+	z-index: 99;
+	height: 100%;
+	-webkit-transition: -webkit-transform 0.5s;
+	transition: transform 0.5s;
+}
+
+.pusher::after {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 0;
+	height: 0;
+	background: rgba(0,0,0,0.2);
+	content: '';
+	opacity: 0;
+	-webkit-transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
+	transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
+}
+
+/* Top Navigation Style */
+.top {
+    position: fixed;
+    top: 0;
+	width: 100%;
+	text-transform: uppercase;
+	font-size: 0.8em;
+	line-height: 2.2;
+	font-weight: 400;
+	background: #F3EDD7;
+    /*background: rgba(243,237,215,.9);*/
+}
+
+.top a {
+	display: inline-block;
+	padding: 0 1em;
+	text-decoration: none;
+	letter-spacing: 0.1em;
+}
+
+.top a:hover {
+	background: rgba(255,255,255,0.4);
+	color: #333;
+}
+
+.top input {
+    background: #F3EDD7;
+    border: none;
+    color: #013B55;
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    font-size: 1.4em;
+    letter-spacing: 1px;
+    outline :none;
+}
+
+    .top input:focus {
+        color: #0393D5;
+    }
+
+.top ::-webkit-input-placeholder {
+    color: #2aae62;
+}
+.top:-moz-placeholder {
+    color: #2aae62;
+}
+.top::-moz-placeholder {
+    color: #2aae62;
+}
+.top:-ms-input-placeholder {
+    color: #2aae62;
+}
+
+.top span.middle {
+    position: fixed;
+    left: 50%;
+    margin-left: -121px;
+}
+
+.top span.middle i {
+    color: #2aae62;    
+}
+
+.top span.right {
+	float: right;
+}
+
+.top span.right a {
+	display: block;
+	float: left;
+}
+
+header {
+	margin: 0 auto 1em;
+	padding: 3em;
+	text-align: center;
+}
+
+header h1 {
+	margin: 0;
+	font-weight: 500;
+	font-size: 2.625em;
+	line-height: 1.2;
+}
+
+header span {
+	display: block;
+	padding: 0 0 0.6em 0.1em;
+	font-size: 60%;
+	color: #aca89a;
+}
+
+a {
+	text-decoration: none;
+	color: #2aae62;
+	outline: none;
+}
+
+a:hover, a:focus {
+	color: #3f7455;
+	outline: none;
+}
+
+/* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before,
+.clearfix:after {
+	display: table;
+	content: " ";
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+#menuBtn {
+    padding: 0 .9em;
+	background: #2aae62;
+	color: #fff;
+	font-size: 1em;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	cursor: pointer;
+	display: inline-block;
+	border-radius: 0 0 2em 0;
+}
+
+#menuBtn:hover {
+	background: #3f7455;
+}
+
+#menuBtn:active {
+    outline: none;      
+}
+
+.main {
+	max-width: 80em;
+	margin: 0 auto;
+}
+
+.column {
+	float: left;
+	width: 50%;
+	padding: 0 2em;
+	min-height: 300px;
+	/*position: relative;*/
+	text-align: right;
+}
+
+.column:nth-child(2) {
+	box-shadow: -1px 0 0 rgba(0,0,0,0.1);
+	text-align: left;
+}
+
+.column p {
+	font-weight: 400;
+	font-size: 2em;
+	padding: 0 0 0.5em;
+	margin: 0;
+	line-height: 1.5;
+}
+
+.smaller {
+    font-size: .7em;    
+}
+
+.smaller .indent{
+    font-size: 150%;
+    margin-left: 25px;
+}
+
+.info {
+	text-align: center;
+	font-size: 1.5em;
+	margin-top: 1em;
+	clear: both;
+	padding: 3em 0;
+}
+
+.info a {
+	font-weight: 700;
+	font-size: 0.9em;
+}
+
+@media screen and (max-width: 768px) {
+	.column {
+		width: 100%;
+		min-width: auto;
+		min-height: auto;
+		padding: 2em; 
+		text-align: center;
+	}
+
+	.column p {
+		font-size: 1.5em;
+	}
+
+	.column:nth-child(2) {
+		text-align: center;
+		box-shadow: 0 -1px 0 rgba(0,0,0,0.1);
+	}
+
+    .top span.middle {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 420px) {
+	header {
+		font-size: 80%;
+	}
+
+	.top {
+		font-size: 105%;
+	}
+
+    .top span.middle {
+        display: none;
+    }
+}

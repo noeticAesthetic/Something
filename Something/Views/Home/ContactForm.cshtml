@@ -1,0 +1,52 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@Styles.Render("~/Content/form")
+@section featured {
+    <div id="form-main">
+        <div id="form-div">
+            <form class="form" id="sampleForm">
+                <p class="name inputIco">
+                    <i class="fa fa-user fa-lg fa-fw"></i>
+                    <input id="name" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Name" />
+                </p>
+
+                <p class="email inputIco">
+                    <i class="fa fa-envelope fa-lg fa-fw"></i>
+                    <input id="email" type="email" class="validate[required,custom[email]] feedback-input" placeholder="Email" title="The best email address to reach you at." />
+                </p>
+
+                <p class="url inputIco">
+                    <i class="fa fa-globe fa-lg fa-fw"></i>
+                    <input id="url" type="url" class="validate[required] feedback-input" placeholder="Have a relevant website?" title="Have a relevant website?" />
+                </p>
+
+                <p class="tel inputIco">
+                    <i class="fa fa-phone fa-lg fa-fw"></i>
+                    <input type="tel" id="tel" class="validate[required] feedback-input" pattern="\d{10}" placeholder="Ten digit phone number" title="The best number to reach you at." />
+                </p>
+
+                <!--<p class="select">
+                    <select id="select" class="validate[required] feedback-input">
+                        <option></option>
+                        <option>Default</option>
+                        <option>This one</option>
+                        <option>That one</option>
+                        <option>Everything</option>
+                        <option>Esoteric</option>
+                    </select>
+                </p>-->
+
+                <p class="text inputIco">
+                    <i class="fa fa-pencil fa-lg fa-fw"></i>
+                    <textarea name="text" class="validate[required,length[6,300]] feedback-input" id="comment" placeholder="What can we do for you?"></textarea>
+                </p>
+
+                <div class="submit">
+                    <input type="submit" value="SEND" id="button-submit" />
+                    <div class="ease"></div>
+                </div>
+            </form>
+        </div>
+    </div>
+}
