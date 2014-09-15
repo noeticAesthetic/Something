@@ -1,13 +1,4 @@
-﻿/*Blue1 #101018
-Blue2 #0757F7
-Green1 #02B6B8
-Green2 #00C685
-
-#80E9F3, #284A59
-    
-#F2F2C1    */
-
-@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700);
+﻿@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700);
 
 html,
 body,
@@ -29,7 +20,7 @@ li {
 
 .content {
 	overflow-y: auto;
-	background: #ECE9BE;
+	background: #E9DBA4;
 }
 
 .content,
@@ -70,10 +61,10 @@ li {
     top: 0;
 	width: 100%;
 	text-transform: uppercase;
-	font-size: 0.8em;
+	font-size: 0.9em;
 	line-height: 2.2;
 	font-weight: 400;
-	background: #F3EDD7;
+	background: #F7F3BD;
     /*background: rgba(243,237,215,.9);*/
 }
 
@@ -90,12 +81,11 @@ li {
 }
 
 .top input {
-    background: #F3EDD7;
+    background: #F7F3BD;
     border: none;
     color: #013B55;
     font-family: 'Lato', Calibri, Arial, sans-serif;
-    font-size: 1.4em;
-    letter-spacing: 1px;
+    font-size: 1.2em;
     outline :none;
 }
 
@@ -119,12 +109,19 @@ li {
 .top span.middle {
     position: fixed;
     left: 50%;
-    margin-left: -121px;
+    margin-left: -107px;
 }
 
 .top span.middle i {
-    color: #2aae62;    
+    color: #2aae62;
+    font-size: 1.5em;
 }
+
+    .top span.middle i:hover {
+        color: #3f7455;
+        cursor: pointer;
+        font-size: 1.8em;
+    }
 
 .top span.right {
 	float: right;
@@ -228,9 +225,8 @@ a:hover, a:focus {
     font-size: .7em;    
 }
 
-.smaller .indent{
+.smaller .subLink{
     font-size: 150%;
-    margin-left: 25px;
 }
 
 .info {

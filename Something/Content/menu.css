@@ -92,7 +92,7 @@
     letter-spacing: 1px;
     outline: none;
     text-transform: uppercase;
-    width: 6em;
+    width: 9em;
 }
 
 #menuSearch input:focus, #menuSearch input:enabled, #menuSearch input:active{

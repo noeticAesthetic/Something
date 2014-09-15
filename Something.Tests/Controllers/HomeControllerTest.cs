@@ -26,26 +26,13 @@ namespace Something.Tests.Controllers
         }
 
         [TestMethod]
-        public void About()
+        public void ContactForm()
         {
             // Arrange
             HomeController controller = new HomeController();
 
             // Act
-            ViewResult result = controller.About() as ViewResult;
-
-            // Assert
-            Assert.IsNotNull(result);
-        }
-
-        [TestMethod]
-        public void Contact()
-        {
-            // Arrange
-            HomeController controller = new HomeController();
-
-            // Act
-            ViewResult result = controller.Contact() as ViewResult;
+            ViewResult result = controller.ContactForm() as ViewResult;
 
             // Assert
             Assert.IsNotNull(result);
