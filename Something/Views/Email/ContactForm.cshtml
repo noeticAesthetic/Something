@@ -1,29 +1,30 @@
-﻿@{
-    ViewBag.Title = "Home Page";
+﻿@model Something.Models.EmailModel
+@{
+    ViewBag.Title = "Contact Form for EmailController";
 }
 @Styles.Render("~/Content/form")
 @section featured {
     <div id="form-main">
         <div id="form-div">
-            <form class="form" id="sampleForm">
+            @using (Html.BeginForm("ContactForm", "Email", FormMethod.Post)) {
                 <p class="name inputIco">
                     <i class="fa fa-user fa-lg fa-fw"></i>
-                    <input id="name" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Name" />
+                    @Html.TextBoxFor(m => m.FromName, new { @class = "length[0,100]] feedback-input", @placeholder = "Name", @required = "true", @autofocus = "true" })
                 </p>
 
                 <p class="email inputIco">
                     <i class="fa fa-envelope fa-lg fa-fw"></i>
-                    <input id="email" type="email" class="validate[required,custom[email]] feedback-input" placeholder="Email" title="The best email address to reach you at." />
+                    @Html.TextBoxFor(m => m.From, new { @class = "feedback-input", @placeholder = "Email", @title = "The best email address to reach you at.", @type = "email", @required = "true" })
                 </p>
 
                 <p class="url inputIco">
                     <i class="fa fa-globe fa-lg fa-fw"></i>
-                    <input id="url" type="url" class="validate[required] feedback-input" placeholder="Have a relevant website?" title="Have a relevant website?" />
+                    @Html.TextBoxFor(m => m.FromUrl, new { @class = "feedback-input", @placeholder = "Have a relevant website?", @type = "url" })
                 </p>
 
                 <p class="tel inputIco">
                     <i class="fa fa-phone fa-lg fa-fw"></i>
-                    <input type="tel" id="tel" class="validate[required] feedback-input" pattern="\d{10}" placeholder="Ten digit phone number" title="The best number to reach you at." />
+                    @Html.TextBoxFor(m => m.FromPhone, new { @class = "feedback-input", @placeholder = "Ten digit phone number", @title = "The best number to reach you at.", @type = "tel", @required = "true" })
                 </p>
 
                 <!--<p class="select">
@@ -39,14 +40,14 @@
 
                 <p class="text inputIco">
                     <i class="fa fa-pencil fa-lg fa-fw"></i>
-                    <textarea name="text" class="validate[required,length[6,300]] feedback-input" id="comment" placeholder="What can we do for you?"></textarea>
+                    @Html.TextAreaFor(m => m.Body, new { @class = "feedback-input", @placeholder = "What can we do for you?", @required = "true"})
                 </p>
 
                 <div class="submit">
                     <input type="submit" value="SEND" id="button-submit" />
                     <div class="ease"></div>
                 </div>
-            </form>
+            }
         </div>
     </div>
 }

@@ -63,8 +63,7 @@ textarea {
     resize: vertical;
 }
 
-    .form input:hover, .form textarea:hover, .form select:hover,
-    .form input:focus, .form textarea:focus, .form select:focus {
+    #form-div input:focus, #form-div textarea:focus, #form-div select:focus {
         background-color: white;
     }
 
@@ -86,19 +85,15 @@ textarea {
     font-weight: 700;
 }
 
-    #button-submit:hover {
+    #button-submit:hover, #buttom-submit:active, #button-submit:focus {
         background-color: rgba(0,0,0,0);
         color: #2aae62;
     }
 
-.submit:hover {
-    color: #3498db;
-}
-
 .ease {
     width: 0px;
     height: 74px;
-    background-color: #0E6131;
+    background-color: #3498db;
     -webkit-transition: .7s ease;
     -moz-transition: .7s ease;
     -o-transition: .7s ease;
