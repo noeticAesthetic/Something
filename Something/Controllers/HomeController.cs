@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Something.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -14,6 +15,12 @@ namespace Something.Controllers
             return View();
         }
 
+        public ActionResult Info()
+        {
+            ViewBag.Title = "Info";
+            return View();
+        }
+
         public ActionResult Credits()
         {
             ViewBag.Message = "Site made possible by:";
@@ -26,10 +33,16 @@ namespace Something.Controllers
             return View();
         }
 
-        public ActionResult Recommended()
+        public ActionResult Recommended(RecommendedModel _recommendedModel)
         {
-            ViewBag.Message = "Recommened.";
-            return View();
+            if (_recommendedModel.Password == _recommendedModel.Token)
+            {
+                return View();
+            }
+            else
+            {
+                return View("Error");
+            }
         }
 
         public ActionResult TODO()

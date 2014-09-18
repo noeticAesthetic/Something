@@ -14,7 +14,7 @@
 
                 <p class="email inputIco">
                     <i class="fa fa-envelope fa-lg fa-fw"></i>
-                    @Html.TextBoxFor(m => m.From, new { @class = "feedback-input", @placeholder = "Email", @title = "The best email address to reach you at.", @type = "email", @required = "true" })
+                    @Html.TextBoxFor(m => m.From, new { @class = "feedback-input", @placeholder = "Email", @type = "email", @required = "true" })
                 </p>
 
                 <p class="url inputIco">
@@ -24,7 +24,8 @@
 
                 <p class="tel inputIco">
                     <i class="fa fa-phone fa-lg fa-fw"></i>
-                    @Html.TextBoxFor(m => m.FromPhone, new { @class = "feedback-input", @placeholder = "Ten digit phone number", @title = "The best number to reach you at.", @type = "tel", @required = "true" })
+                    @Html.TextBoxFor(m => m.FromPhone, new { @class = "feedback-input", @placeholder = "Ten digit phone number", @title = "Ten digit phone number", @type = "tel", @required = "true",
+                    @pattern = "^\\d{10}$" })
                 </p>
 
                 <!--<p class="select">
