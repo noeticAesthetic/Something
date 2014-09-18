@@ -33,7 +33,7 @@ namespace Something.Controllers
             return View();
         }
 
-        public ActionResult Recommended(RecommendedModel _recommendedModel)
+        public ActionResult Recommended(RecommendedModel _recommendedModel, string password, FormCollection collection)
         {
             if (_recommendedModel.Password == _recommendedModel.Token)
             {
@@ -41,6 +41,7 @@ namespace Something.Controllers
             }
             else
             {
+                ViewBag.Error = "Incorrect password";
                 return View("Error");
             }
         }

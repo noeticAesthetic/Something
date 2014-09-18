@@ -80,19 +80,6 @@ li {
 	color: #333;
 }
 
-.top input {
-    background: #F7F3BD;
-    border: none;
-    color: #013B55;
-    font-family: 'Lato', Calibri, Arial, sans-serif;
-    font-size: 1.2em;
-    outline :none;
-}
-
-    .top input:focus {
-        color: #0393D5;
-    }
-
 .top ::-webkit-input-placeholder {
     color: #2aae62;
 }
@@ -105,6 +92,19 @@ li {
 .top:-ms-input-placeholder {
     color: #2aae62;
 }
+
+.top input {
+    background: #F7F3BD;
+    border: none;
+    color: #013B55;
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    font-size: 1.2em;
+    outline :none;
+}
+
+    .top input:focus {
+        color: #0393D5;
+    }
 
 .top span.middle {
     position: fixed;
