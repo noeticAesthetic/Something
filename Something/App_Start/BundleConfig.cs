@@ -30,8 +30,8 @@ namespace Something
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                 "~/Content/site.css",
+                "~/Content/recommended.css",
                 "~/Content/font-awesome.css",
-                "~/Content/menu.css",
                 "~/Content/normalize.css"));
 
             bundles.Add(new StyleBundle("~/Content/form").Include("~/Content/form.css"));

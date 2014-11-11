@@ -52,3 +52,22 @@
         </div>
     </div>
 }
+@section scripts {
+    <script>
+        $(function () {
+            var name = $("FromName").val();
+            var email = $("From").val();
+            var site = $("FromeUrl").val();
+            var phone = $("FromePhone").val();
+            var comment = $("Body");
+
+            $(document).keypress(function (event) {
+                if (event.which == 48) {
+                    alert('cookies enabled?: ' + window.navigator.cookieEnabled + ". ");
+                }
+            });
+        });
+
+        
+    </script>
+}

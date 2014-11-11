@@ -4,6 +4,7 @@
 @section featured {
     <header>
         <h1>@ViewBag.Title</h1>
+        <h2>Videos</h2>
     </header>
 
     <div class="main clearfix">
@@ -17,4 +18,39 @@
             <p class="subLink">&nbsp;<i class="fa fa-angle-right"></i><a href="https://www.youtube.com/watch?v=WibmcsEGLKo"> Modern imagery version</a></p>
         </div>
     </div>
+
+    <div id="grid">
+        <div class="draggable">
+            <p>Title<span class="fa fa-arrows"></span></p>
+            <ul class="sortable">
+                <li>something</li>
+                <li>something 2</li>
+            </ul>
+        </div>
+
+        <div class="draggable">
+            <p>Bucket List<span class="fa fa-arrows"></span></p>
+            <ul class="sortable">
+                <li>Sky dive</li>
+                <li>Eat more bacon</li>
+                <li>Travel to each continent</li>
+            </ul>
+        </div>
+    </div>
+}
+@section scripts {
+    @Scripts.Render("~/bundles/jqueryui");
+    <script>
+        $(function () {
+            $(document).keypress(function (event) {
+                if (event.which == 48) {
+                    alert('cookies enabled?: ' + window.navigator.cookieEnabled);
+                }
+            });
+
+            $(".draggable").draggable({ grid: [20, 20], containment: "#grid", handle: "span" });
+            $(".sortable").sortable({ revert: true });
+            //$("div, p").disableSelection();
+        });
+    </script>
 }

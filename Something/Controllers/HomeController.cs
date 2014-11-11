@@ -35,15 +35,16 @@ namespace Something.Controllers
 
         public ActionResult Recommended(RecommendedModel _recommendedModel, string password, FormCollection collection)
         {
-            if (_recommendedModel.Password == _recommendedModel.Token)
-            {
-                return View();
-            }
-            else
-            {
-                ViewBag.Error = "Incorrect password";
-                return View("Error");
-            }
+            return View();
+            //if (_recommendedModel.Password == _recommendedModel.Token)
+            //{
+            //    return View();
+            //}
+            //else
+            //{
+            //    ViewBag.Error = "Incorrect password";
+            //    return View("Error");
+            //}
         }
 
         public ActionResult TODO()

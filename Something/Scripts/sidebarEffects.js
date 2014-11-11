@@ -11,8 +11,8 @@
  var SidebarMenuEffects = (function() {
 
  	function hasParentClass( e, classname ) {
-		if(e === document) return false;
-		if( classie.has( e, classname ) ) {
+ 	    if (e === document) return false;
+		if( classie.has( e, classname ) ) { //TODO: find way to check for .menuClose as well.
 			return true;
 		}
 		return e.parentNode && hasParentClass( e.parentNode, classname );
@@ -34,8 +34,8 @@
 			resetMenu = function() {
 				classie.remove( container, 'menu-open' );
 			},
-			bodyClickFn = function(evt) {
-				if(!hasParentClass( evt.target, 'menu' )) {
+			bodyClickFn = function(evt) { // Added OR check for X icon(menuClose class).
+				if(!hasParentClass( evt.target, 'menu' ) || hasParentClass(evt.target, 'menuClose')) {
 					resetMenu();
 					document.removeEventListener( eventtype, bodyClickFn );
 				}
@@ -59,5 +59,4 @@
 	}
 
 	init();
-
 })();
